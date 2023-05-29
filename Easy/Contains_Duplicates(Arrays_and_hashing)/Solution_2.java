@@ -2,7 +2,7 @@
 
 import java.util.Arrays;
 
-public class Solution_2 {
+class Solution_2 {
     public static void main(String[] args) {
         int[] nums = {2, 8, 4, 5, 1, 4};
         System.out.println(containsDuplicate(nums));
