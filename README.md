@@ -5,6 +5,8 @@ This repository will contain three main folders: Easy, Medium and Hard (separati
 Please note that while the recursive solutions provided are concise and easy to understand, they often come with a higher space complexity due to the recursive call stack. Therefore, it's essential to consider the trade-offs between time and space when choosing an appropriate solution for a specific scenario.
 # Understand Data Structures and Algorithms
 Make sure you have a solid understanding of fundamental data structures like arrays, linked lists, stacks, queues, trees, and graphs before you try to understand these solutions. Additionally, grasp key algorithms such as sorting, searching, and graph traversal.
+# Analyze Time and Space Complexities
+While trying to solve Blind75 problems on your own or understand the provided solutions, pay attention to the time and space complexities of your solutions. Understanding these complexities will help you optimize your code and choose the most efficient algorithms
 
 
 
