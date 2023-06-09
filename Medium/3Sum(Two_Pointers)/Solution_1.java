@@ -1,5 +1,5 @@
 // This solution is a brute force approach going through each and every number in the array with triple forloop
-
+// Time limit exceeds if you run it on leetcode because the runtime is really high. Therefore, it is not an optimal solution.
 import java.util.*;
 
 public class Solution_1 {
