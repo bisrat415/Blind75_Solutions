@@ -36,7 +36,8 @@ public class Solution_1 {
         return ans;
         // Let n be the size of the array
         // Time Complexity: O(n^3) because of a triple forloop
-        // Space Complexity: O()
+        // Space Complexity: O(n^3) - In the worst case, when all elements in nums form distinct triplets summing to zero, the number of elements in ans and check can grow to O(n^3).
+
     }
     
 }
