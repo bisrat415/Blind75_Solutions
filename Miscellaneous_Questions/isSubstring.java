@@ -26,4 +26,9 @@ public class isSubstring {
         }
         return false;
     }
+    // let n be the length of str and m be the length of potentialStr
+    // Time Complexity: O(n * m) - the outer loop runs (n - m) + 1 times and the inner loop runs m times. 
+    // Therefore, the overall complexity is m * ((n - m) + 1) which becomes O(m * n). And the operations in the loop are constant time.
+    
+    // Space Complexity: O(1) - because we only used constant extra space
 }

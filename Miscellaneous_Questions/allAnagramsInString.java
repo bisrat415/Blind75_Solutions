@@ -47,4 +47,11 @@ public class allAnagramsInString {
         }
         return ans;
     }
+    // Let n be the length of the String s and m be the length of the String p
+    // Time Complexity: O(n + m) - the first for loop has a run time of O(m). The outer while loop iterates through the characters of the string s 
+    // The nested while loop also iterates through the characters of string s, but it only runs when the counter is zero, which happens when an anagram is found. 
+    // In the worst case, this nested while loop will also iterate through all the characters exactly once. 
+    // Therefore, the overall time complexity of the nested while loop is O(n).
+    
+    // Space Complexity: O(m) because of the hashmap
 }
