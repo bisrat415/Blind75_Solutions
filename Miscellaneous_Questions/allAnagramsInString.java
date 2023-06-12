@@ -1,4 +1,4 @@
-// This file solves Question 438 (Find All Anagrams in a String) from leetcode using the sliding windown approach
+// This file solves Question 438 (Find All Anagrams in a String) from leetcode using the sliding window approach
 
 import java.util.*;
 public class allAnagramsInString {
