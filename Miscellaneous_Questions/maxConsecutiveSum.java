@@ -22,4 +22,20 @@ public class maxConsecutiveSum {
         // Time Complexity: O((n - k + 1) * k) because the outer loop runs (n - k + 1) and the inner loop iterates k times
         // Space Complexity: O(1) because we are only using constant extra space (does not depend on the size of the input)
     }
+     // Solution #2 (sliding window)
+     public static int maxSum2(int[] nums, int k) {
+        int maxSum = 0;
+        int windowSum = 0;
+        for (int i = 0; i < k; i++) {
+            windowSum += nums[i];
+        }
+        maxSum = windowSum;
+        for (int j = k; j < nums.length; j++) {
+            windowSum = windowSum - nums[j - k] + nums[j];
+            maxSum = windowSum > maxSum ? windowSum : maxSum;
+        }
+        return maxSum;
+       // Time Complexity: O(n - k + k) = O(n) because the first forloop takes O(k) time and the second one takes O(n - k)
+       // Space Complexity: O(1) because we are only utilizing constant extra space
+   }
 }
