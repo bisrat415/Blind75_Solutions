@@ -1,3 +1,5 @@
+// Question: Given a string s, return the length of the longest substring that contains at most two distinct characters.
+// This is 159. Longest Substring with At Most Two Distinct Characters on leetcode
 import java.util.*;
 public class LongestSubstringWithAtmostTwoDistinctChars {
     public static void main(String[] args) {
