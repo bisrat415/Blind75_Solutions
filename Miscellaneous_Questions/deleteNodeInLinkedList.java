@@ -11,7 +11,7 @@
 // This solution solves the problem by copying the value of the next node to the provided node and deleting the next node (In the end it looks as if you deleted the given node)
 public class deleteNodeInLinkedList {
     public static void main(String[] args) {
-        
+
         
     }
     public static void deleteNode(ListNode node) {
@@ -20,6 +20,8 @@ public class deleteNodeInLinkedList {
         node.next = temp.next;
         temp.next = null;
     }
+    // Time Complexity: O(1) because all the operations are constant time (don' t depend on the input size)
+    // Space Complexity: O(1) because we only utilized constant extra space 
 }
 
 
