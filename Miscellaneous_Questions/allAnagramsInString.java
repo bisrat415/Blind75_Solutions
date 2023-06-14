@@ -1,7 +1,7 @@
 // This file solves Question 438 (Find All Anagrams in a String) from leetcode using the sliding window approach
 
 import java.util.*;
-public class allAnagramsInString {
+public class AllAnagramsInString {
     public static void main(String[] args) {
         String s = "cbaebabacd";
         String p = "abc";

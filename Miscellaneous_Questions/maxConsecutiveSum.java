@@ -1,5 +1,5 @@
 // Question: Given an array of integers of size ‘n’, calculate the maximum sum possible for ‘k’ consecutive elements in the array.
-public class maxConsecutiveSum {
+public class MaxConsecutiveSum {
     public static void main(String[] args) {
         int[] nums = {100, 200, 300, 400};
         int k = 2;

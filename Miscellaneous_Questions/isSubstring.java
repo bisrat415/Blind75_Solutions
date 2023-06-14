@@ -1,6 +1,6 @@
 // This file implements a function that takes in two strings and returns true if the second string is substring of the first, and false otherwise
 import java.util.*;
-public class isSubstring {
+public class IsSubstring {
     public static void main(String[] args) {
         String str = "laboratory";
         String potentialSubStr = "ory";

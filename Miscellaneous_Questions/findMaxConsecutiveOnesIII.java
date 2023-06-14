@@ -1,6 +1,6 @@
 // Question: Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 // The solution utilizes the sliding window approach to find all available valid windows and calculate the longest one
-public class findMaxConsecutiveOnesIII {
+public class FindMaxConsecutiveOnesIII {
     public static void main(String[] args) {
         int[] nums = {1,1,1,0,0,0,1,1,1,1,0};
         int k = 2;

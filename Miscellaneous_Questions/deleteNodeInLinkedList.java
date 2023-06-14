@@ -9,7 +9,7 @@
 // }
 
 // This solution solves the problem by copying the value of the next node to the provided node and deleting the next node (In the end it looks as if you deleted the given node)
-public class deleteNodeInLinkedList {
+public class DeleteNodeInLinkedList {
     public static void main(String[] args) {
 
         
