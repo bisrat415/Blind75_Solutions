@@ -18,7 +18,6 @@ public class Solution_1 {
 
     }
     public void reorderList(ListNode head) {
-        // Solution #1 (cut, reverse and merge)
         if (head == null || head.next == null) {
             return;
         }
