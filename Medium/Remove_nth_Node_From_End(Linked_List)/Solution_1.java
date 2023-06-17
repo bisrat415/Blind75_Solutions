@@ -35,6 +35,7 @@ public class Solution_1 {
         prev.next = prev.next.next;
         return head;
     }
+    // Let n be the number of nodes in the linked list
     // Time Complexity: O(n) because we are iterating through the whole linked list in the first forloop which takes O(n) time. 
     // And then we have another loop that is used to remove nth node which also takes O(n) in the worst case
     // Space Complexity: O(1) because we are only using constant extra space

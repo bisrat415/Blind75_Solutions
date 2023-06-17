@@ -29,6 +29,7 @@ public class Solution_2 {
         left.next = left.next.next;
         return head;
     }
+    // Let n be the number of nodes in the linked list
     // Time Complexity: O(n) because we are iterating through the whole linked list once and all the operations in the loops are constant time
     // Space Complexity: O(1) because we only utilized constant extra space
 
