@@ -15,6 +15,8 @@
  * }
  */
 import java.util.*;
+
+import javax.swing.tree.TreeNode;
 public class Solution_1 {
     public static void main(String[] args) {
 
@@ -43,5 +45,7 @@ public class Solution_1 {
         }
         return levels;
     }
-    
+    // Let n be the number of nodes in the binary tree
+    // Time Complexity: O(n) because we are visting each node once and all the operations in the loop are constant time
+    // Space Complexity: O(n) because in the worst case, if the binary tree is a complete binary tree, the maximum number of nodes in the lowest level is N/2 (where N is the number of nodes in the binary tree) so we will have n / 2 elements in the queue at once
 }
