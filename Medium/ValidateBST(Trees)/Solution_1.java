@@ -21,7 +21,7 @@ public class Solution_1 {
         // Let n be the number of nodes in the tree and h be height of the tree
         // Time Complexity: O(n) because we are visting every node once
         // Space Complexity: O(h) - O(n) in the worst case (skewed tree) and O(logn) in
-        // the best case (balanced tree)
+        // the best case / average case (balanced tree)
     }
 
 }

@@ -16,7 +16,6 @@
  */
 import java.util.*;
 
-import javax.swing.tree.TreeNode;
 public class Solution_2 {
 
 
@@ -45,7 +44,7 @@ public class Solution_2 {
     } 
     // Let n be the number of nodes in the binary tree and h be the height of the tree
     // Time Complexity: O(n) because we are visiting each node once
-    // Space Complexity: O(h) - O(n) for worst case (skewed tree) and O(logn) for best case (balanced tree)
+    // Space Complexity: O(h) - O(n) for worst case (skewed tree) and O(logn) for best case / average case (balanced tree)
 
     
 }

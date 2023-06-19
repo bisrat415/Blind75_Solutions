@@ -27,5 +27,5 @@ public class Solution_1 {
     }
     // Let n be the number of the number of nodes in the binary search tree and h be the height of the tree
     // Time Complexity: O(h) - O(n) for worst case (skewed BST) and O(logn) for best case (balanced BST)
-    // Space Complexity: O(h) - O(n) for worst case (skewed BST) and O(logn) for best case (balanced BST)
+    // Space Complexity: O(h) - O(n) for worst case (skewed BST) and O(logn) for best case / average case (balanced BST)
 }

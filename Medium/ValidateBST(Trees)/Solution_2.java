@@ -36,6 +36,6 @@ public class Solution_2 {
         return true;
         // Let n be the number of nodes in the tree and h be height of the tree
         // Time Complexity: O(n) because we are visiting each node once when the tree is a BST and all the other operations in the loops are constant time
-        // Space Complexity: O(h) - O(n) in the worst case (skewed tree) and O(logn) in the best case (balanced tree)
+        // Space Complexity: O(h) - O(n) in the worst case (skewed tree) and O(logn) in the best case / average case (balanced tree)
     }
 }
