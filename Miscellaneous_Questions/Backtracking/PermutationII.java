@@ -1,6 +1,6 @@
 // Solution for Q.47(PermutationII) from leetcode
-// We use backtracking through DFS and sort the array to make it easier to avoid duplicates
-
+// Solution #1: We use backtracking through DFS and sort the array to make it easier to avoid duplicates
+// Solution #2: We use backtracking trough DFS and put the result in a set to remove duplicates
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -20,6 +20,8 @@ public class PermutationII {
         Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> perm = new ArrayList<>();
+        // The used array keeps track of whether we have added a number at a specific index to the current permutation (at the current depth in the recursion/decision tree). 
+        // This is used to avoid using the same number multiple times in a permutation.
         boolean[] used = new boolean[nums.length];
         permuteUniqueHelper(nums, result, perm, used);
         return result;
@@ -30,6 +32,8 @@ public class PermutationII {
             result.add(new ArrayList(perm));
         } else {
             for (int i = 0; i < nums.length; i++) {
+                // If the whole condition after || is true, it means we've just backtracked from a branch where the previous duplicate was used, so we skip the current number to avoid creating a duplicate permutation.
+                // This condition essentially enforces the rule that, among duplicate numbers, we always use the leftmost one first. This way, we avoid ending up with duplicate permutations
                 if (used[i] || (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])) {
                     continue;
                 }
