@@ -1,5 +1,5 @@
 // This solution uses iteration through BFS to comeup with a solution
-// We Linear scan the 2d grid map, if a node contains a '1', then it is a root node that triggers a Breadth First Search. So we put it into a queue and set its value as '0' to mark as visited node. 
+// We scan the 2d grid map in a double forloop, if a node contains a '1', then it is a root node that triggers a Breadth First Search. So we put it into a queue and set its value as '0' to mark as visited node. 
 // Then we iteratively search the neighbors of enqueued nodes until the queue becomes empty.
 
 // Time Limit Exceeds on leetcode
@@ -16,6 +16,9 @@ public class Solution_1 {
 
     }
     public static int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0) {
+            return 0;
+        }
         int num_islands = 0;
         int rowLength = grid.length;
         int colLength = grid[0].length;
