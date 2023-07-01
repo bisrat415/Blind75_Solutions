@@ -40,7 +40,7 @@ public class Solution_2 {
         return result;
     }
 
-    public void bfs(int[][] heights, Queue<List<Integer>> queue, boolean[][] reachable) {
+    public static void bfs(int[][] heights, Queue<List<Integer>> queue, boolean[][] reachable) {
         while (!queue.isEmpty()) {
             List<Integer> currCell = queue.remove();
             int currRow = currCell.get(0);
