@@ -34,11 +34,8 @@ public class Solution_1 {
             }
         }
         return result;
-        // Let m be the number of rows and n be the number of columns
-        // Time Complexity: O(m * n) - in the worst case (all the cells have the same height), we will be visiting each cell twice (one by pacificReachable and one by atlanticReachable). So it will take O(2mn) and we can drop the coefficient, 2
-        // Space Complexity: O(m * n) - we are creating two arrays with the same size as heights (pacificReachable and atlanticReachable).
-        // The height of the recursive call stack is also bounded by O(mn) because in the worst case scenario, where DFS could potentially go through all cells, the maximum depth of the recursion stack would be mn
     }
+
     public static void dfs(int[][] heights, int r, int c, boolean[][] reachable) {
         if (reachable[r][c]) {
             return;
@@ -52,5 +49,8 @@ public class Solution_1 {
             }
         }
     }
-    
+    // Let m be the number of rows and n be the number of columns
+    // Time Complexity: O(m * n) - in the worst case (all the cells have the same height), we will be visiting each cell twice (one by pacificReachable and one by atlanticReachable). So it will take O(2mn) and we can drop the coefficient, 2
+    // Space Complexity: O(m * n) - we are creating two arrays with the same size as heights (pacificReachable and atlanticReachable).
+    // The height of the recursive call stack is also bounded by O(mn) because in the worst case scenario, where DFS could potentially go through all cells, the maximum depth of the recursion stack would be mn
 }
