@@ -18,12 +18,12 @@ public class Solution_1 {
         boolean[][] pacificReachable = new boolean[numRows][numColumns];
         boolean[][] atlanticReachable = new boolean[numRows][numColumns];
         for (int i = 0; i < numRows; i++) {
-            dfs(heights, i, 0, pacificReachable);
-            dfs(heights, i, numColumns - 1, atlanticReachable);
+            dfs(heights, i, 0, pacificReachable); // Start a dfs from each cell next to the pacific on the left most side
+            dfs(heights, i, numColumns - 1, atlanticReachable); // Start a dfs from each cell next to the atlantic on the left most side
         }
         for (int j = 0; j < numColumns; j++) {
-            dfs(heights, 0, j, pacificReachable);
-            dfs(heights, numRows - 1, j, atlanticReachable);
+            dfs(heights, 0, j, pacificReachable); // Start a dfs from each cell next to the pacific on the top side
+            dfs(heights, numRows - 1, j, atlanticReachable); // Start a dfs from each cell next to the atlantic on the bottom side
         }
         List<List<Integer>> result = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
@@ -37,6 +37,7 @@ public class Solution_1 {
     }
 
     public static void dfs(int[][] heights, int r, int c, boolean[][] reachable) {
+        // if it is already visited, skip
         if (reachable[r][c]) {
             return;
         }
