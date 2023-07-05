@@ -19,6 +19,9 @@ public class DeleteNodeInLinkedList {
         node.val = temp.val;
         node.next = temp.next;
         temp.next = null;
+        // If we are not worried about making the next pointer for temp null we can just do it in two lines like this:
+        // node.val = node.next.val;
+        // node.next = node.next.next;
     }
     // Time Complexity: O(1) because all the operations are constant time (don' t depend on the input size)
     // Space Complexity: O(1) because we only utilized constant extra space 
