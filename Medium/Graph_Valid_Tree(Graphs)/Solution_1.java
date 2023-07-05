@@ -10,7 +10,6 @@ public class Solution_1 {
         System.out.println(validTree(n , edges));
     }
     public static boolean validTree(int n, int[][] edges) {
-        // Solution #1 (DFS and Graph Theory) - Recursive
        List<List<Integer>> adjList = new ArrayList<>();
        for (int i = 0; i < n; i++) {
            adjList.add(new ArrayList<Integer>());
