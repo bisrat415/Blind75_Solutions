@@ -5,10 +5,11 @@ public class ShortestPathInBinaryMatrix {
     private static final int[][] DIRECTIONS = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {1, 1}, {-1, -1}, {1, -1}, {-1, 1}};
     public static void main(String[] args) {
         int[][] grid = {{0, 0, 0}, {1, 1, 0}, {1, 1, 0}};
+        System.out.println(shortestPathBinaryMatrix2(grid));
         System.out.println(shortestPathBinaryMatrix(grid));
     }
 
-    // Solution #1 (BFS while updating the input grid)
+    // Solution #1 (BFS while overwriting the input grid)
     public static int shortestPathBinaryMatrix(int[][] grid) {
         int rows = grid.length;
         int columns = grid[0].length;
@@ -45,4 +46,38 @@ public class ShortestPathInBinaryMatrix {
         // But actually, it turns out that there are cases with massive grids where the number of cells at a single distance is proportional to m * n. 
         // So even with cells of a single distance on the queue, in the worst case, the space needed is O(m * n)
     }
+
+    // BFS without overwriting the input grid
+    public static int shortestPathBinaryMatrix2(int[][] grid) {
+        int rows = grid.length;
+        int columns = grid[0].length;
+        if (grid[0][0] == 1 || grid[rows - 1][columns - 1] == 1) {
+            return -1;
+        }
+        Queue<int[]> queue = new LinkedList<>();
+        boolean[][] visited = new boolean[rows][columns];
+        queue.offer(new int[]{0, 0, 1});
+        while (!queue.isEmpty()) {
+            int[] currCell = queue.poll();
+            int row = currCell[0];
+            int column = currCell[1];
+            int currDistance = currCell[2];
+            if (row == rows - 1 && column == columns - 1) {
+                return currDistance;
+            }
+            for (int[] direction : DIRECTIONS) {
+                int newRow = row + direction[0];
+                int newCol = column + direction[1];
+                if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < columns && grid[newRow][newCol] == 0 && !visited[newRow][newCol]) {
+                    queue.add(new int[]{newRow, newCol, currDistance + 1});
+                    visited[newRow][newCol] = true;
+                }
+            }
+        }
+        return -1;
+        // Let m be the number of rows and n be the number of columns
+        // Time Complexity: O(m * n) - In the worst case we are visiting cell in the grid once
+        // Space Complexity: O(m * n) because of the visited array and the maximum possible number of elements we can put in the queue is the number of cells in grid
+    }
+
 }
