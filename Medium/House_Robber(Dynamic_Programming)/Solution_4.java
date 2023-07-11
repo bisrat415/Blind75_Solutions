@@ -16,6 +16,7 @@ public class Solution_4 {
             robIncludingLastHouse = curr;
         }
         return robIncludingLastHouse;
+        // Let n be the length of nums
         // Time Complexity: O(n) because of the forloop and all the operations in the forloop are constant time
         // Space Complexity: O(1) because we are only utilizing constant extra space   
     }
