@@ -29,7 +29,7 @@ public class MaximumSumSubArray {
         int sum = nums[0];
         int maxSum = nums[0];
         for (int i = 1; i < nums.length; i++) {
-            sum = Math.max(sum + nums[i], nums[i]);
+            sum = Math.max(sum + nums[i], nums[i]); // if the current element is greater than the sum of all the elements before it, we assign the value of that element to the variable sum
             maxSum = Math.max(sum, maxSum);
         }
         return maxSum;
