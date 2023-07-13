@@ -1,13 +1,18 @@
 // This solution uses recursion with memoization to solve the problem
+import java.util.*;
 public class Solution_1 {
     public static void main(String[] args) {
         String s = "226";
         System.out.println(numDecodings(s));
     }
      public static int numDecodings(String s) {
-        return numDecodeHelper(s, 0);
+        Map<Integer, Integer> memo = new HashMap<>();
+        return numDecodeHelper(s, memo, 0);
     }
-    public static int numDecodeHelper(String s, int i) {
+    public static int numDecodeHelper(String s, Map<Integer, Integer> memo, int i) {
+        if (memo.containsKey(i)) {
+            return memo.get(i);
+        }
         if (i == s.length()) {
             return 1;
         }
@@ -17,10 +22,11 @@ public class Solution_1 {
         if (i == s.length() - 1) {
             return 1;
         }
-        int ans = numDecodeHelper(s, i + 1);
+        int ans = numDecodeHelper(s, memo, i + 1);
         if (Integer.parseInt(s.substring(i, i + 2)) <= 26) {
-            ans += numDecodeHelper(s, i + 2);
+            ans += numDecodeHelper(s, memo, i + 2);
         }
+        memo.put(i, ans);
         return ans;
     }
     // Let n be the length of the string
