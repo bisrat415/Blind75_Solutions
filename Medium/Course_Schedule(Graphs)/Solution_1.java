@@ -1,4 +1,4 @@
-// This solution uses Khan's Algorithm to do find the topological sorting of the graph and figure out if there is a way to finish all courses
+// This solution uses Khan's Algorithm to do find the topological sorting of the graph and figure out if there is a way to finish all courses (if there is a cycle we can't finish)
 // For detailed explanation of Khan's Algorithm watch this video: https://www.youtube.com/watch?v=cIBFEhD77b4&t=2s
 import java.util.*;
 public class Solution_1 {
