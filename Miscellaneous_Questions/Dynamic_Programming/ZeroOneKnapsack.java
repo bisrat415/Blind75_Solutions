@@ -33,7 +33,9 @@ public class ZeroOneKnapsack {
         }
         memo[i][capacity] = result;
         return result;
-        
+        // Let n be the size of the array weights and c be capacity 
+        // Time Complexity: O(n * c) - the algorithm considers all possible combinations of items and capacity but its optimized by using memoization because there are overlapping subproblems
+        // Space Complexity: O(n * c) because of the 2D array memo
 
     }
 }

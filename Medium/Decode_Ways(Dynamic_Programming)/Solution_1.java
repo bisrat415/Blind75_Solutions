@@ -3,7 +3,7 @@ import java.util.*;
 public class Solution_1 {
     public static void main(String[] args) {
         String s = "226";
-        System.out.println(numDecodings(s));
+        System.out.println(numDecodings(s)); // should print 3
     }
      public static int numDecodings(String s) {
         Map<Integer, Integer> memo = new HashMap<>();
