@@ -1,4 +1,4 @@
-// This solution uses the the logic of House Robber I and customizes it for this case
+// This solution uses the the logic of House Robber I (recursive approach with memoization) and customizes it for this case
 
 public class Solution_1 {
     public static void main(String[] args) {
@@ -6,7 +6,6 @@ public class Solution_1 {
         System.out.println(rob(nums));
     }
     public static int rob(int[] nums) {
-        // Solution #1 (Recursive Approach with Memoization)
         if (nums == null) {
             return 0;
         }
