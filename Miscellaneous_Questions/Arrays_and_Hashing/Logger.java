@@ -1,6 +1,5 @@
 // This is Q.359(Logger Rate Limiter) from Leetcode
 // We use a hashmap to map each unique message to a timestamp
-package Miscellaneous_Questions.Hashing;
 
 import java.util.*;
 class Logger {
