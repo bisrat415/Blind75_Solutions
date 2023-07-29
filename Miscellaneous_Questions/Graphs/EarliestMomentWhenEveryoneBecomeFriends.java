@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// Solution #1 (DFS)
 public class EarliestMomentWhenEveryoneBecomeFriends {
     public static void main(String[] args) {
         int[][] logs = {{0, 2, 0}, {1, 0, 1}, {3, 0, 3}, {4, 1, 2}, {7, 3, 1}};
@@ -46,4 +47,75 @@ public class EarliestMomentWhenEveryoneBecomeFriends {
         }
         return count;
     }
+}
+
+// Solution #2 (Union-Find)
+class EarliestMomentWhenEveryoneBecomeFriends2 {
+
+     public int earliestAcq(int[][] logs, int n) {
+        Arrays.sort(logs, (a, b) -> Integer.compare(a[0], b[0]));
+        DisjointSet ds = new DisjointSet(n);
+        int count = n;
+        for (int[] log : logs) {
+            int node1 = log[1];
+            int node2 = log[2];
+            if (!ds.areSameSet(node1, node2)) {
+                ds.union(node1, node2);
+                count--;
+                if (count == 1) {
+                    return log[0];
+                }
+            }
+        }
+        return -1;
+    }
+}
+
+class DisjointSet {
+    int[] roots;
+    int[] ranks;
+    public DisjointSet(int n) {
+        this.roots = new int[n];
+        this.ranks = new int[n];
+        for (int i = 0; i < n; i++) {
+            this.roots[i] = i;
+            this.ranks[i] = 0;
+        }
+    }
+
+    // Implement find with path compression
+    public int find(int node) {
+        if (roots[node] == node) {
+            return node;
+        }
+        roots[node] = find(roots[node]);
+        return roots[node];
+    }
+
+    public boolean areSameSet(int node1, int node2) {
+        return find(node1) == find(node2);
+    }
+
+    // Implement union by rank
+    public void union(int node1, int node2) {
+        int root1 = find(node1);
+        int root2 = find(node2);
+        if (root1 != root2) {
+            if (ranks[root1] > ranks[root2]) {
+                roots[root2] = root1;
+            } else if (ranks[root2] > ranks[root1]) {
+                roots[root1] = root2;
+            } else {
+                roots[root2] = root1;
+                ranks[root1]++;
+            }
+        }
+    }
+    // Let n be the total number of nodes and m be the total number of logs
+    // Time Complexity: O(mlogm + n + mα(n)) - sorting logs takes O(mlogm)
+    // Creating the disjoint set instance takes O(n) time because we have to populate the arrays roots and ranks
+    // For each log we are calling our ds methods union and areSameSet and these methods take α(n) which represents the inverse Akermann Function which is almost constant for practical purposes
+
+    // Space Complexity: O(n + space used by the sorting algorithm) - roots and ranks take O(n) space. 
+    // In java the Arrays.sort() is implemented as a variant of quicksort algorithm whose space complexity is O(log⁡m)
 }
