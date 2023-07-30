@@ -13,24 +13,26 @@ public class Solution_1 {
         for (int i = 0; i < s.length(); i++) {
             set.add(s.charAt(i));
         }
-        int maxLength = 0;
-        for (char ch : set) {
+       int maxLength = 0;
+        for (char currChar : set) {
             int left = 0;
             int right = 0;
-            int charCount = 0;
+            int countChange = 0;
             while (right < s.length()) {
-                if (s.charAt(right) == ch) {
-                    charCount++;
+                if (s.charAt(right) != currChar) {
+                    countChange++;
                 }
-                while ((right - left + 1) - charCount > k) {
-                    if (s.charAt(left) == ch) {
-                        charCount--;
+                while (countChange > k) {
+                    maxLength = Math.max(maxLength, right - left);
+                    if (s.charAt(left) != currChar) {
+                    countChange--;
                     }
                     left++;
                 }
-                maxLength = Math.max(maxLength, (right - left + 1));
                 right++;
             }
+            maxLength = Math.max(maxLength, right - left);
+
         }
         return maxLength;
 
