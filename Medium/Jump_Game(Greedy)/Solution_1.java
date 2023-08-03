@@ -1,6 +1,4 @@
 // This a brute-forced recursive approach
-// This solution goes through the array starting from the end, backwards, and uses a greedy approach to find a solution
-// For a detailed description of the algorithm visit this link: https://leetcode.com/problems/jump-game/editorial/
 import java.util.*;
 public class Solution_1 {
     private static Map<Integer, Boolean> memo;
