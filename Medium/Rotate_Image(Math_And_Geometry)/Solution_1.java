@@ -39,4 +39,7 @@ public class Solution_1 {
             }
         }
     }
+    // Let m be the total number of rows and n be the total number of columns
+    // Time Complexity: O(m*n) - both transpose and invertHorizontally have double forloops that go through the matrix
+    // Space Complexity: O(1) because we are only utilizing constant extra space
 }
