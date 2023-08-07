@@ -2,8 +2,7 @@
 public class Solution_1 {
     public static void main(String[] args) {
         int[] height = {1,8,6,2,5,4,8,3,7};
-        int[] height2 = {1, 1};
-        System.out.println(maxArea(height2));
+        System.out.println(maxArea(height));
         
     }
     public static int maxArea(int[] height) {
