@@ -2,12 +2,13 @@
 public class Solution_1 {
     public static void main(String[] args) {
         int[] height = {1,8,6,2,5,4,8,3,7};
-        System.out.println(maxArea(height));
+        int[] height2 = {1, 1};
+        System.out.println(maxArea(height2));
         
     }
     public static int maxArea(int[] height) {
         int maxArea = 0;
-        for (int i = 0; i < height.length; i++) {
+        for (int i = 0; i < height.length - 1; i++) {
             for (int j = i + 1; j < height.length; j++) {
                 int width = j - i;
                 int currentArea = Math.min(height[i], height[j]) * width;
