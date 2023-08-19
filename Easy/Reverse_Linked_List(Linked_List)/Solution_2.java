@@ -11,7 +11,7 @@ public class Solution_2 {
         head.next.next = head;
         head.next = null;
         return newHeadOfReversedSublist;
-        // Time Complexity: O(n)
+        // Time Complexity: O(n) because we are visiting each node once and all the other operations in the recursive method are constant time
         // Space Complexity: O(n) - Each recursive function call takes up space in the stack frame and for a list of length n, we make n recursive calls
     }
 }
