@@ -13,7 +13,7 @@ public class Solution_1 {
     public static void main(String[] args) {
         
     }
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode tempHead = new ListNode();
         ListNode tail = tempHead;
         while(list1 != null && list2 != null) {
