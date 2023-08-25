@@ -15,5 +15,8 @@ public class Solution_2 {
 
         }
         return false;
+        // Let n be the total number of nodes
+        // Time Complexity: O(n) because we are visiting each node once
+        // Space Complexity: O(1) because we are only utilizing constant extra space
     }
 }
