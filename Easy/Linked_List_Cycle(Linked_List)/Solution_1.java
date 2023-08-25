@@ -24,5 +24,8 @@ public class Solution_1 {
             head = head.next;
         }
         return false;
+        // Let n be the total number of nodes
+        // Time Complexity: O(n) because we are visiting each node once
+        // Space Complexity: O(n) because we initialised a new hashset where we store each node in the linked list 
     }
 }
