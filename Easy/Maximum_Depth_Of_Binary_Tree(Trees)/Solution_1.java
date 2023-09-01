@@ -39,6 +39,9 @@ public class Solution_1 {
 
         }
         return depth;
+        // Let n be the number of nodes and h be the height of the tree
+        // Time Complexity: O(n) because we are visiting each node once
+        // Space Complexity: O(h) - In the worst case, where the tree is completely unbalanced and resembles a linked list, the height of the tree can be equal to the number of nodes n, resulting in a space complexity of O(n). However, in a balanced binary tree, the height can be approximately log(n), resulting in a space complexity of O(log n).
     }
 
 }
