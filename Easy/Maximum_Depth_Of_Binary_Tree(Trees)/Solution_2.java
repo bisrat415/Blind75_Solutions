@@ -25,6 +25,9 @@ public class Solution_2 {
         int rightDepth = maxDepth(root.right);
         int leftDepth = maxDepth(root.left);
         return 1 + Math.max(rightDepth, leftDepth);
+        // Let n be the number of nodes and h be the height of the binary tree
+        // Time Complexity = O(n) because we are visiting each node once
+        // Space Complexity = O(h) - O(n) for worst case (completely unbalanced tree) and O(logn) for best case (completely balanced tree) 
     }
     
 }
