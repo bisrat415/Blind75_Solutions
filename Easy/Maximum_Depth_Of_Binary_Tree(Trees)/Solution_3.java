@@ -33,5 +33,8 @@ public class Solution_3 {
         }
         maxDepthHelper(root.left, depth + 1);
         maxDepthHelper(root.right, depth + 1);
+        // Let n be the number of nodes and h be the height of the binary tree
+        // Time Complexity: O(n) because we are visiting each node once
+        // Space Complexity: O(h) - O(n) for the worst case (skewed binary tree) and O(logn) for the best case (balance tree)
     }
 }
