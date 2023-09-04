@@ -42,4 +42,6 @@ public class Solution_1 {
         }
         return true;
     }
+    // Time Complexity: O(N), where N is the total number of nodes in the larger tree. The algorithm performs a level-order traversal of the two trees simultaneously, visiting each node once. This is because the algorithm needs to compare all the nodes in both trees to determine if they are identical.
+    // Space Complexity: The space complexity is determined by the size of the queue used to store the nodes during the traversal. In the worst case, the queue can hold up to the maximum number of nodes at a single level in both trees. In a completely balanced binary tree, the maximum number of nodes at a level is approximately N/2 (where N is the total number of nodes). Therefore, the space complexity is O(N) in the worst case.
 }
